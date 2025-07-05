@@ -1,0 +1,36 @@
+<p>For this assignment I will be using 2 datasets extracted from the Church of England data service.<br /><br />Both files are currently in the .xlsx format.<br /><br />The first dataset contains data on Church attendance figures by diocese over several years, the second dataset contains figures on donations given during services over several years.<br /><br />I will be manipulating the data and linking it to see if I can establish a direct relationship between attendance numbers and amounts received in giving.<br /><br />The following manipulation techniques will be used.<br /><br /><br /></p>
+<ul>
+<li>Cleaning the data where necessary , standardizing formats such as dates as required, ensuring consistency and maintaining the integrity of the data.</li>
+<li>Filtering and sorting the data by removing columns unnecessary for this task and compiling the data so it is more suitable for the objective if required.</li>
+<li>Transforming the data by creating new columns and calculating any values useful to this analysis.</li>
+<li>Normalization, ensuring that the values used are consistent across the datasets, time/date formats, decimalisation etc.</li>
+<li>Fuzzy matching to remove inconsistencies found in diocese names.</li>
+</ul>
+<p>These steps ensure that both datasets are clean, consistent, and prepared for linking by their common attributes like diocese and year.</p>
+<p> </p>
+<p> </p>
+<p><span>First dataset in it's original format:</span></p>
+<p> <img src="@@PLUGINFILE@@/total_giving_original.png" alt="" width="457" height="187" /></p>
+<p> There are several issues with this original format that could cause issues when loaded in to other database software such as SQL server.<br /><br />I have reformatted the table so that years, are presented in a separate column to the financial totals.<br /><br />Each of the years is now sperate and linked to each deanery which will enable for more in-depth querying vs the current format<br /><br />The commas have been removed from the rounded up financial totals into a whole number integer format which should prevent any issues with SQL seeing the totals as 2 sperate values due to the commas.<br /><br />I have also Aligned the key column names with the names in the other table.</p>
+<p> </p>
+<p><strong>Reformatted table, now more suitable for linking:</strong><br /><br /><br /><img src="@@PLUGINFILE@@/reformatted_dataset_1.png" alt="" width="1003" height="1200" /><br /><br /><br /><strong>Second dataset in its original format:</strong></p>
+<p> </p>
+<p> <img src="@@PLUGINFILE@@/2nd_dataset_for_q8.png" alt="" width="502" height="351" /></p>
+<p> </p>
+<p>Tasks carried out include, normalizing the data so that values are consistent across the 2 datasets (date format, integers etc.)<br /><br />Filtered out columns that are not required for the analysis such as child attendance, regular giving via standing orders and various others.</p>
+<p> </p>
+<p><strong>Reformatted table ready for linking:</strong></p>
+<p> </p>
+<p><strong><img src="@@PLUGINFILE@@/Screenshot%202025-04-27%20172912.png" alt="" width="433" height="412" /></strong></p>
+<p> </p>
+<p> After reformatting the dataset to make them more suitable for further analysis, I used pandas in oythin to carry out fuzzy matching of the diocese names. <br /><br />This Linked several of the dioceses together that would otherwise have not been recognised as the same, this includes  </p>
+<p> </p>
+<ul>
+<li><span>St.Edmundsbury &amp; Ipswich - <span>St. Edms &amp; Ipswich </span></span></li>
+<li><span><span>St.Albans - <span>St. Albans</span></span></span></li>
+<li><span><span><span>Sodor and Man - <span>Sodor &amp; Man</span><br /></span></span></span></li>
+</ul>
+<p><strong>Below is a screenshot of the fuzzy matched and linked datasets:</strong></p>
+<p><strong><img src="@@PLUGINFILE@@/fuzzy_matching_for_assignment.png" alt="" width="525" height="637" /></strong></p>
+<p> </p>
+<p> </p>
