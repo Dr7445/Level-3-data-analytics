@@ -1,0 +1,51 @@
+<p> </p>
+<h2>Explain the importance of blending data from multiple sources</h2>
+<p>Blending data from multiple sources is a critical part of data analysis. Pooling data across various systems within an organisation helps to create a more accurate and holistic picture of what is occurring. However, siloed data makes this objective difficult to achieve. Therefore, it is essential that the underlying data architecture and the pipelines it supports enable the seamless flow of data into a centralised repository, such as a data warehouse or data lake. Once centralised, the data can be blended and analysed more effectively to drive insight and informed decision-making.</p>
+<hr />
+<p><strong>Blending data from multiple sources (Practical Application)</strong></p>
+<p>For this example, I sourced two CSV files:</p>
+<ul>
+<li>
+<p>One from Our World in Data (OWID<strong>)</strong> - a dataset of CO₂ emissions by country and year</p>
+</li>
+<li>
+<p>One from the World Bank - a dataset on renewable energy consumption</p>
+</li>
+</ul>
+<p>Both files were imported into Power BI and prepared for transformation, cleaning, and blending.</p>
+<p>The data was cleaned (e.g., converting text to numerical format, removing unnecessary columns) and then merged using an inner join on matching keys (e.g., country and year).</p>
+<p>This blending step allowed me to combine renewable energy data with emissions data into a single table — ready for further analysis, visualisation, and modelling.</p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/2-datasets-exported-to-pwr-bi.png" alt="" width="354" height="234" /></p>
+<p> </p>
+<p> </p>
+<p><strong>Merging the data using an inner join after cleaning and changing columns to the correct format where required (text to decimals in most cases) and removing unnecessary columns. </strong><br /><br /><img src="@@PLUGINFILE@@/mergin%20the%20data.png" alt="" width="449" height="259" /></p>
+<p> </p>
+<p><strong>Renewable energy data now blended in to the emissions table, ready for further analysis and modelling.</strong></p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/Blended%20data.png" alt="" width="512" height="385" /></p>
+<p> </p>
+<p> </p>
+<p><span style="font-size: large;"><strong>Techniques that can be used to blend data include:</strong></span><br /><br /><span style="font-size: medium;"><strong>Data Joining:   </strong></span></p>
+<p> </p>
+<ul>
+<li><strong>Inner Joins -</strong> Combining only the rows that have matching values in 2 datasets</li>
+<li><strong>Left join -</strong> A left join keeps all the row from the left-hand dataset and adds matching data from the right (if any).</li>
+<li><strong>Right join -</strong> Conversely a right join keeps all the rows from the right-hand side dataset and add matching data from the left-hand side (if any).</li>
+<li><strong>Full join -</strong> A full join combines all the rows from both datasets and fills gaps with null values where no match exists.</li>
+<li><strong>Union join -</strong> A unioin join places two datasets on top of each other, assuming that they have the same columns.</li>
+</ul>
+<p> </p>
+<p><span style="font-size: medium;"><strong>Other matching techniques:</strong></span></p>
+<p> </p>
+<ul>
+<li><strong>Fuzzy matching -</strong> Matches values that are similar but have different iterations, for example in a place name column you could have Saint Albans or St Albans the 2 places are one in the same but without fuzzy matching they would be seen as two sperate entities.</li>
+<li><strong>Spatial matching -</strong> Matches data based on location, emergency services use spatial matching for efficient dispatching of emergency personnel.</li>
+</ul>
+<p> </p>
+<p><span style="font-size: medium;"><strong>Additional techniques:</strong></span></p>
+<ul>
+<li><strong>Consolidation -</strong> Combines multiple worksheets into one, often used used for summarising the data across sheets.</li>
+<li><strong>Merging data -</strong> Merging integrates datasets into a single table , typically through shared columns such as ID or Dates.</li>
+</ul>
+<p> </p>
