@@ -1,0 +1,132 @@
+<p><span style="font-size: x-large;"><strong>Impact of Bias on Data Integrity and Usability</strong></span></p>
+<p><br /><span style="font-size: medium;"> Bias in data can significantly affect the reliability, accuracy, and fairness of any analysis. If left unchecked, it can lead to flawed conclusions, unethical outcomes, and decisions that reinforce stereotypes or discrimination. Even algorithms are susceptible to biases, particularly when they are trained on historical data and left unchecked, which can unintentionally perpetuate gender, racial, and socioeconomic disparities that can have serious real-world repercussions, including unfair employment outcomes, unequal access to medical treatment, and even unfair judicial outcomes in the criminal justice system.</span></p>
+<p><span style="font-size: medium;">One notable example is the case of Eric Loomis, who was sentenced to six years in prison with five years of extended supervision after an algorithm from the COMPAS programme classified him at an elevated risk of recidivism (re-offending). The algorithm's influence on the judge affected his sentencing decision for a crime that is believed not to warrant such severe punishment, and the prison time mandated was disproportionate to the crime committed. This raised significant concerns about transparency and accountability in algorithmic decision-making.</span></p>
+<p><span style="font-size: medium;">To ensure data remains objective, trustworthy, and fit for purpose, bias must be identified and mitigated through rigorous validation and verification processes. These methods help improve data quality, enhance compliance with regulations like GDPR, and maintain ethical standards throughout analysis.</span></p>
+<h3><strong>Validation Methods</strong></h3>
+<p><span style="font-size: medium;">Validation focuses on ensuring data is correctly formatted, reasonable, and fit for use. Some key validation techniques include:</span></p>
+<ul>
+<li>
+<p><span style="font-size: medium;"><strong>User input validation:</strong> The use of processes such as drop down tools to help eliminate spelling erros or incorrect formats.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Acceptable characters:</strong> Ensuring that the correct characters are used in the right context and correct locations such as requiring an "@" in email addresses.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Check digit validation:</strong> Applying algorithms to confirm numerical accuracy (e.g., ISBN, credit card numbers).</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Format checks:</strong> Ensuring correct structures for inputs like dates (DD-MM-YYYY) or phone numbers.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Lookup tables:</strong> Cross-referencing input data with predefined lists such as for country or gender selection.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Presence check:</strong> Preventing blank or null values where data is required.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Range checks:</strong> Verifying that values fall within expected ranges (e.g., age 18-24 for demographic data).</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>External system review:</strong> Comparing new entries with trusted databases for consistency.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Quality assurance:</strong> Implementing systematic audits and checks of the data  to maintain high data standards.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Spell check:</strong> Identifying and correcting spelling errors.</span></p>
+</li>
+</ul>
+<p><span style="font-size: medium;">All of the above  methods ensure that incoming data is structured, meaningful, and reduces the risk of bias impacting results.</span></p>
+<div> </div>
+<h3><strong>Verification Methods</strong></h3>
+<p><span style="font-size: medium;">While validation ensures data meets formatting and logical requirements, verification is about confirming accuracy and legitimacy. Reliable verification processes help maintain <strong>data integrity</strong>, preventing errors and misleading results.</span></p>
+<p><span style="font-size: medium;">Key verification techniques include:</span></p>
+<ul>
+<li>
+<p><span style="font-size: medium;"><strong>Reliable data collection:</strong> Using structured methods like <strong>surveys, forms, or controlled input fields</strong> to minimize human error.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Cross-checking information:</strong> Comparing data points across multiple sources to detect discrepancies.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>User confirmation checks:</strong> Providing mechanisms for users to review and correct their entries before submission.</span></p>
+</li>
+</ul>
+<p><span style="font-size: medium;">By combining strong validation and verification measures, organizations reduce bias, ensure fairness, and maintain high-quality datasets. This safeguards the reliability of any analysis, ensuring results can be trusted and ethically applied.</span></p>
+<p> </p>
+<p><strong><span style="font-size: x-large;">Validation and verification of my dataset</span></strong></p>
+<p> </p>
+<p><span style="font-size: medium;">In my example dataset, I have employed the following validation checks.</span></p>
+<p><span style="font-size: medium;">Check User-Entered Data, I scanned the dataset for user-entered data and determined if it was sensible and in the correct or appropriate format.</span></p>
+<p>I found character errors in the email columns, incorrect digit lengths in the phone number columns, missing values in the postcode column, unrealistic values in the age column (likely due to input error), spelling mistakes in the gender column that could have been eliminated via use of a dropdown list, likewise with the Favourite Product column,and finally, the loyalty points column contained an unexpected value of -1 when the range should be from 0 to the upper limit of 10,000.</p>
+<p>I began the wrangling process by first applying a range and creating a new column for age in Power Query that removed any ages above the upper limit of the expected human lifespan, giving a range of 18 (the minimum age requirement) to 100 as the upper age range and replacing any outliers with null values.</p>
+<p><img src="@@PLUGINFILE@@/range_check.png" alt="" width="481" height="1200" /></p>
+<p> </p>
+<p><span style="font-size: medium;">Because the number of null values is quite large relative to the dataset 9% I decided not to carry out mean imputation (working out an average and inputting into the null values) so as not to create a bias in the data.</span><br /><br /><span style="font-size: medium;">I then carried out a length check for the phone number column using the following formula.</span><br /><br /><img src="@@PLUGINFILE@@/length_check_formula.png" alt="" width="602" height="367" /><br /><br /></p>
+<p> </p>
+<p><span style="font-size: medium;">I then placed this column adjacent to the phone number column to flag any incorrect inputs.</span><br /><br /><br /></p>
+<p><span style="font-size: medium;"> Next, I carried out a character check in emails to ensure addresses were entered correctly and flagged any in an adjacent column that were missing the expected @ character.</span><br /><br /><img src="@@PLUGINFILE@@/email_check.png" alt="" width="235" height="635" /></p>
+<p> </p>
+<p><span style="font-size: medium;">I then carried out a presence check in the postcode column to identify any missing values and flagged them up in an adjacent column using the following formula.</span><br /><br /><img src="@@PLUGINFILE@@/presence%20check%20formula.png" alt="" width="479" height="295" /></p>
+<p> </p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/presence%20check.png" alt="" width="356" height="792" /></p>
+<p> </p>
+<p> </p>
+<p><span style="font-size: medium;"> I then checked any appropriate columns for spelling errors and corrected as necessary, using M code to stipulate the correct spellings for the column and then creating an adjacent quality assurance column.</span></p>
+<p><br /><span style="font-size: medium;"><img src="@@PLUGINFILE@@/spellcheck%20syntax.png" alt="" width="629" height="452" /></span></p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/spellcheck%20column.png" alt="" width="362" height="625" /></p>
+<p> </p>
+<p> </p>
+<p><span style="font-size: medium;"> Next, I created a Lookup table for the gender values to flag any incorrect values, I also created a pass/fail column for quality assurance.</span></p>
+<p> </p>
+<p><br /><img src="@@PLUGINFILE@@/gender%20lookup.png" alt="" width="457" height="467" /></p>
+<p> </p>
+<p> </p>
+<p><span style="font-size: medium;"> </span></p>
+<p><span style="font-size: medium;"> I then created a range check for loyalty points; the range should be between 0 and 10,000 anything outside of these values will now return a fail.</span><br /><br /><img src="@@PLUGINFILE@@/range_formulas.png" alt="" width="585" height="369" /></p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/range_frmula_column.png" alt="" width="262" height="482" /></p>
+<p> </p>
+<p> </p>
+<h3><strong>Validation and Verification Summary</strong></h3>
+<blockquote>
+<p><span style="font-size: medium;">As part of the data preparation process, a structured validation and verification framework was implemented in Power Query to assess the integrity, accuracy, and usability of the dataset.<br /><br /></span></p>
+<h4><span style="font-size: medium;"><strong>Validation methods used:</strong></span></h4>
+<ul>
+<li>
+<p><span style="font-size: medium;"><strong>Format checks</strong>: Email addresses were checked for the presence of the @ symbol.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Length checks</strong>: Phone numbers were validated against an expected 13-character format.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Range checks</strong>: Age values were required to fall between 18–100, and loyalty points between 0–1000. Outliers such as 975 (age) and -1 (points) were flagged.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Presence checks</strong>: Postcodes were checked for missing entries.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Lookup table validation</strong>: Gender column was compared against a defined list of acceptable values using a reference table.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Spell check</strong>: The Favourite Product column was tested against a list of known product names to detect typos such as “Smratphone”.</span></p>
+</li>
+</ul>
+<p><span style="font-size: medium;">Each rule was implemented using pass/fail logic, with clear flags to identify invalid or unexpected values.</span></p>
+<p> </p>
+<h4><span style="font-size: medium;"><strong>Verification Methods used:</strong></span></h4>
+<ul>
+<li>
+<p><span style="font-size: medium;"><strong>How data is collected</strong>: The dataset was treated as user-entered data originating from web forms or CRM systems. This informed the validation strategy by anticipating common user input errors.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Cross-checking techniques</strong>: Categorical values were cross-referenced with lookup tables to ensure accuracy. This helped detect invalid entries that may have bypassed format checks.</span></p>
+</li>
+<li>
+<p><span style="font-size: medium;"><strong>Accuracy of user-entered data</strong>: Typographical errors and unrealistic values (e.g. 975 years old age) were identified and, where appropriate, corrected. This aligns with real-world data verification where human judgment complements automated validation.</span></p>
+</li>
+</ul>
+<p><span style="font-size: medium;">Together, these methods ensured a high degree of structural and factual integrity, supporting the dataset’s readiness for further cleaning, analysis or reporting.</span></p>
+</blockquote>
