@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:leap2="http://terms.leapspecs.org/" xmlns:categories="http://wiki.leapspecs.org/2A/categories" xmlns:portfolio="https://learn.thinkemployment.com/portfolio/export/leap2a/10076/1751715609"><id>https://learn.thinkemployment.com/portfolio/export/leap2a/10076/1751715609</id><title>Leap2A export from Moodle for Dean Robinson</title><leap2:version>http://www.leapspecs.org/2010-07/2A/</leap2:version><generator uri="https://learn.thinkemployment.com" version="2021051707.02">Moodle</generator><author><name>Dean Robinson</name><email>robinson182@icloud.com</email><uri>https://learn.thinkemployment.com/user/view.php?id=10076</uri></author><entry><id>portfolio:submissions_onlinetext7739</id><title>Assignment: Unit 2 - Q3 - Select the appropriate tool for data analysis and apply appropriate data cleansing measures</title><content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><h2>Select the appropriate tool for data analysis and apply appropriate data cleansing measures:</h2>
+<p> </p>
+<p><span style="font-size: medium;"><strong>Tool used for cleaning: </strong>Python</span></p>
+<p> </p>
+<p> </p>
+<p><span style="font-size: medium;"><strong>Data to be cleaned:<br/></strong></span></p>
+<p> </p>
+<p><span style="font-size: medium;"><strong><img src="@@PLUGINFILE@@/Screenshot%202025-04-13%20201757.png" alt="" width="573" height="568"/></strong></span></p>
+<p> </p>
+<ul>
+<li>Remove 'writtenby' from author string and insert space between names.</li>
+<li>Remove 'narratedby:' from narrator string and insert space between names.</li>
+<li>Rename columns to either be more relevant to data contained or to capitalise.</li>
+<li>change time format so it is less cluttered.</li>
+<li>Correct release date so it is in DD-MM-YYY format instead of YY-MM-DD.</li>
+<li>Capaitilise all languages.</li>
+<li>Declutter stars by chagning format to 5/5 and ratings total from column.</li>
+<li>Correct price format.</li>
+<li/>
+</ul>
+<p><span style="font-size: medium;"><strong>Cleaned data:</strong></span></p>
+<p> </p>
+<p><span style="font-size: medium;"><strong><img src="@@PLUGINFILE@@/Screenshot%202025-04-13%20202522.png" alt="" width="587" height="359"/></strong></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><strong>Code repository:</strong></p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/rep1.png" alt="" width="431" height="376"/> </p>
+<p> </p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/rep2.png" alt="" width="430" height="477"/></p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/rep3.png?time=1744573026753" alt="" width="432" height="560"/></p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/rep4.png" alt="" width="431" height="920"/></p>
+<p> </p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/rep5.png" alt="" width="438" height="898"/></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><img src="@@PLUGINFILE@@/rep6.png" alt="" width="439" height="914"/></p></div></content><rdf:type rdf:resource="leap2:resource"/><category term="web" scheme="categories:resource_type#"/></entry></feed>
